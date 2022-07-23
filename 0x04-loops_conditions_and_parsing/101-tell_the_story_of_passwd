@@ -2,5 +2,5 @@
 # Write a Bash script that displays the content of the file /etc/passwd
 while IFS=: read -r Uname Pass U_ID G_ID G_ECOS homeDIR sh
 do
-	echo "The user $Uname is part of the $G_ID gang, lives in $homeDIR and rides $sh. $U_ID place is protected by the passcode $Pass, more info about the user here: $G_ECOS"
+	echo "The user $Uname is part of the $G_ID gang, lives in $homeDIR and rides $sh. $U_ID's place is protected by the passcode $Pass, more info about the user here: $G_ECOS"
 done < "/etc/passwd" 

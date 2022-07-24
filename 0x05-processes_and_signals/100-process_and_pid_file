@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Write a Bash script that Creates the file /var/run/myscript.pid containing its PID
-echo $(pidof 100-process_and_pid_file) >> /var/run/myscript.pid
-trap "I hate the kill command" SIGTERM
-trap "Y U no love me?!" SIGINT
-trap "rm /var/run/myscript.pid; exit 0" SIGQUIT SIGTERM
+echo "$(pidof 100-process_and_pid_file)" >> /var/run/myscript.pid
+trap 'echo "I hate the kill command", rm -f /var/run/myscript.pid; exit' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap "rm /var/run/myscript.pid; exit 0" SIGQUIT
 while true
 do
 	echo "To infinity and beyond"

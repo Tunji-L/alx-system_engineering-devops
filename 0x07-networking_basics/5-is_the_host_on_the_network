@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Bash script that pings an IP address passed as an argument
-[ $# -eq 0 ] && { echo "Usage: $0 {IP_ADDRESS}"; exit 1; }
+[ $# -ne 1 ] && { echo "Usage: $0 {IP_ADDRESS}"; exit 1; }
 ping -c 5 "$1"

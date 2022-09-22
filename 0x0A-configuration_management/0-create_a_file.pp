@@ -1,4 +1,4 @@
-
+# create a file in /tmp
 node default {
   file {'/tmp/school':
   ensure  =>present,

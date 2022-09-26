@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Install nginx
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sudo systemctl restart nginx
+sudo su -
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+systemctl restart nginx
